@@ -1,0 +1,90 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 20px 20px 20px;
+    grid-template-areas: "texto" "supervisor" "construccion" "karma" "calculadora";
+    row-gap: 10px;
+    margin: 1.5em 1em 1.5em 1em;
+}
+
+.text {
+    grid-area: texto;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 0 2em 0 2em;
+}
+
+.supervisor {
+    grid-area: supervisor;
+    border-top: solid 5px cyan;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0 2em 0 2em;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px #000;
+}
+
+.teamBuilder {
+    grid-area: construccion;
+    border-top: solid 5px red;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0 2em 0 2em;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px #000;
+}
+
+.karma {
+    grid-area: karma;
+    border-top: solid 5px yellow;
+    display: inline-block;
+    margin-bottom: 1em;
+    padding: 0 2em 0 2em;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px #000;
+}
+
+.calculator {
+    grid-area: calculadora;
+    border-top: solid 5px #2196F3;
+    display: inline-block;
+    padding: 0 2em 0 2em;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px #000;
+}
+
+.icon {
+    float: right;
+    padding-bottom: 1em;
+}
+
+@media (min-width:992px) {
+    .container {
+        display: grid;
+        grid-template-columns: 20% 20% 20%;
+        grid-template-rows: 20% 20% 20%;
+        grid-template-areas: ". texto ." "supervisor construccion calculadora" "supervisor karma calculadora";
+        gap: 10px 10px;
+    }
+}
+
+
+/* @media (min-width:700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 100px;
+        grid-template-areas: "cuadro1 cuadro2 cuadro4" "cuadro1 cuadro3 cuadro4";
+        /* column-gap: 10px;
+        row-gap: 15px; */
+
+
+/* gap: 15px 10px;
+        align-content: center;
+        justify-content: space-around;
+    }
+} */
