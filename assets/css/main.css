@@ -2,15 +2,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 20px 20px 20px;
-    grid-template-areas: "texto" "supervisor" "construccion" "karma" "calculadora";
-    row-gap: 10px;
-    margin: 1.5em 1em 1.5em 1em;
-}
-
 .text {
     grid-area: texto;
     margin-bottom: 1em;
@@ -62,29 +53,23 @@ body {
     padding-bottom: 1em;
 }
 
+.container {
+    display: grid;
+    grid-template-areas: "texto" "supervisor" "construccion" "karma" "calculadora";
+    row-gap: 10px;
+    margin: 1.5em 1em 1.5em 1em;
+}
+
 @media (min-width:992px) {
     .container {
         display: grid;
-        grid-template-columns: 20% 20% 20%;
-        grid-template-rows: 20% 20% 20%;
         grid-template-areas: ". texto ." "supervisor construccion calculadora" "supervisor karma calculadora";
         gap: 10px 10px;
     }
-}
-
-
-/* @media (min-width:700px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50px 100px;
-        grid-template-areas: "cuadro1 cuadro2 cuadro4" "cuadro1 cuadro3 cuadro4";
-        /* column-gap: 10px;
-        row-gap: 15px; */
-
-
-/* gap: 15px 10px;
-        align-content: center;
-        justify-content: space-around;
+    .supervisor {
+        align-self: center;
     }
-} */
+    .calculator {
+        align-self: center;
+    }
+}
